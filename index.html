@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Galaxy | Alph4-Jet Fun Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <div class="stars" id="starContainer"></div>
+        
+        <!-- Navigation Tabs -->
+        <nav class="game-nav">
+            <button class="nav-btn active" data-game="magic">✨ Button</button>
+            <button class="nav-btn" data-game="shatter">💥 Shatter</button>
+            <button class="nav-btn" data-game="draw">🎨 Draw</button>
+            <button class="nav-btn" data-game="bubbles">🧼 Bubbles</button>
+            <button class="nav-btn" data-game="music">🎵 Music</button>
+            <button class="nav-btn" data-game="memory">🧩 Match</button>
+        </nav>
+
+        <main class="container">
+            <!-- Game 1: The Magic Button -->
+            <section id="game-magic" class="game-view active">
+                <header class="header">
+                    <h1 class="title">Magic Button</h1>
+                    <p class="subtitle">Press for a cosmic surprise!</p>
+                </header>
+                <div class="button-wrapper">
+                    <button id="magicButton" class="magic-button">
+                        <span class="button-content">
+                            <span class="icon">✨</span>
+                            <span class="text">PUSH ME!</span>
+                        </span>
+                        <div class="button-glow"></div>
+                    </button>
+                </div>
+                <div class="counter-container">
+                    <p>Fun points: <span id="pressCount">0</span></p>
+                </div>
+            </section>
+
+            <!-- NEW Game: Animal Shatter -->
+            <section id="game-shatter" class="game-view">
+                <header class="header">
+                    <h1 class="title">Animal Shatter</h1>
+                    <p class="subtitle">Click the animal to blast it away!</p>
+                </header>
+                <div class="shatter-container" id="shatterContainer">
+                    <div id="shatter-target" class="shatter-target">🦁</div>
+                    <canvas id="shatterCanvas"></canvas>
+                </div>
+                <div class="counter-container">
+                    <p>Animals Found: <span id="shatterCount">0</span></p>
+                </div>
+            </section>
+
+            <!-- Game 2: Rainbow Drawing -->
+            <section id="game-draw" class="game-view">
+                <header class="header">
+                    <h1 class="title">Rainbow Paint</h1>
+                    <p class="subtitle">Wave your mouse to paint the stars!</p>
+                </header>
+                <div class="canvas-container">
+                    <canvas id="paintCanvas"></canvas>
+                    <button class="clear-btn" id="clearCanvas">Reset Sky</button>
+                </div>
+            </section>
+
+            <!-- Game 3: Bubble Pop -->
+            <section id="game-bubbles" class="game-view">
+                <header class="header">
+                    <h1 class="title">Bubble Pop</h1>
+                    <p class="subtitle">Don't let them escape!</p>
+                </header>
+                <div id="bubble-arena" class="bubble-arena">
+                    <div id="bubble-score" class="score-float">Score: 0</div>
+                </div>
+            </section>
+
+            <!-- Game 4: Musical Emojis -->
+            <section id="game-music" class="game-view">
+                <header class="header">
+                    <h1 class="title">Sound Space</h1>
+                    <p class="subtitle">Play the cosmic keyboard!</p>
+                </header>
+                <div class="music-keyboard">
+                    <button class="music-key" data-note="C4"><span>🎹</span><small>C4</small></button>
+                    <button class="music-key" data-note="D4"><span>🐱</span><small>D4</small></button>
+                    <button class="music-key" data-note="E4"><span>🐶</span><small>E4</small></button>
+                    <button class="music-key" data-note="F4"><span>🦄</span><small>F4</small></button>
+                    <button class="music-key" data-note="G4"><span>🦁</span><small>G4</small></button>
+                    <button class="music-key" data-note="A4"><span>🦖</span><small>A4</small></button>
+                    <button class="music-key" data-note="B4"><span>🚀</span><small>B4</small></button>
+                    <button class="music-key" data-note="C5"><span>⭐</span><small>C5</small></button>
+                </div>
+            </section>
+
+            <!-- Game 5: Cosmic Match -->
+            <section id="game-memory" class="game-view">
+                <header class="header">
+                    <h1 class="title">Cosmic Match</h1>
+                    <p class="subtitle">Find the twin space icons!</p>
+                </header>
+                <div id="memory-grid" class="memory-grid">
+                    <!-- Cards injected by JS -->
+                </div>
+                <div class="memory-controls">
+                  <button class="clear-btn" id="resetMemory">New Game</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2026 Alright reserved | Gift from your Dady..!</p>
+                <div class="footer-line"></div>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
